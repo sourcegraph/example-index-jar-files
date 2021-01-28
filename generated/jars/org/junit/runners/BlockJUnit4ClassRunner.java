@@ -1,0 +1,33 @@
+public class org.junit.runners.BlockJUnit4ClassRunner extends org.junit.runners.ParentRunner<org.junit.runners.model.FrameworkMethod> {
+  public org.junit.runners.BlockJUnit4ClassRunner(java.lang.Class<?>) throws org.junit.runners.model.InitializationError;
+  protected org.junit.runners.BlockJUnit4ClassRunner(org.junit.runners.model.TestClass) throws org.junit.runners.model.InitializationError;
+  protected void runChild(org.junit.runners.model.FrameworkMethod, org.junit.runner.notification.RunNotifier);
+  protected boolean isIgnored(org.junit.runners.model.FrameworkMethod);
+  protected org.junit.runner.Description describeChild(org.junit.runners.model.FrameworkMethod);
+  protected java.util.List<org.junit.runners.model.FrameworkMethod> getChildren();
+  protected java.util.List<org.junit.runners.model.FrameworkMethod> computeTestMethods();
+  protected void collectInitializationErrors(java.util.List<java.lang.Throwable>);
+  protected void validateNoNonStaticInnerClass(java.util.List<java.lang.Throwable>);
+  protected void validateConstructor(java.util.List<java.lang.Throwable>);
+  protected void validateOnlyOneConstructor(java.util.List<java.lang.Throwable>);
+  protected void validateZeroArgConstructor(java.util.List<java.lang.Throwable>);
+  protected void validateInstanceMethods(java.util.List<java.lang.Throwable>);
+  protected void validateFields(java.util.List<java.lang.Throwable>);
+  protected void validateTestMethods(java.util.List<java.lang.Throwable>);
+  protected java.lang.Object createTest() throws java.lang.Exception;
+  protected java.lang.Object createTest(org.junit.runners.model.FrameworkMethod) throws java.lang.Exception;
+  protected java.lang.String testName(org.junit.runners.model.FrameworkMethod);
+  protected org.junit.runners.model.Statement methodBlock(org.junit.runners.model.FrameworkMethod);
+  protected org.junit.runners.model.Statement methodInvoker(org.junit.runners.model.FrameworkMethod, java.lang.Object);
+  protected org.junit.runners.model.Statement possiblyExpectingExceptions(org.junit.runners.model.FrameworkMethod, java.lang.Object, org.junit.runners.model.Statement);
+  protected org.junit.runners.model.Statement withPotentialTimeout(org.junit.runners.model.FrameworkMethod, java.lang.Object, org.junit.runners.model.Statement);
+  protected org.junit.runners.model.Statement withBefores(org.junit.runners.model.FrameworkMethod, java.lang.Object, org.junit.runners.model.Statement);
+  protected org.junit.runners.model.Statement withAfters(org.junit.runners.model.FrameworkMethod, java.lang.Object, org.junit.runners.model.Statement);
+  protected java.util.List<org.junit.rules.MethodRule> rules(java.lang.Object);
+  protected java.util.List<org.junit.rules.TestRule> getTestRules(java.lang.Object);
+  protected boolean isIgnored(java.lang.Object);
+  protected void runChild(java.lang.Object, org.junit.runner.notification.RunNotifier);
+  protected org.junit.runner.Description describeChild(java.lang.Object);
+  static java.lang.ThreadLocal access$100();
+  static {};
+}

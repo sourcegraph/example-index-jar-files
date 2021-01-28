@@ -1,0 +1,35 @@
+public abstract class junit.runner.BaseTestRunner implements junit.framework.TestListener {
+  public static final java.lang.String SUITE_METHODNAME;
+  static int fgMaxMessageLength;
+  static boolean fgFilterStack;
+  boolean fLoading;
+  public junit.runner.BaseTestRunner();
+  public synchronized void startTest(junit.framework.Test);
+  protected static void setPreferences(java.util.Properties);
+  protected static java.util.Properties getPreferences();
+  public static void savePreferences() throws java.io.IOException;
+  public static void setPreference(java.lang.String, java.lang.String);
+  public synchronized void endTest(junit.framework.Test);
+  public synchronized void addError(junit.framework.Test, java.lang.Throwable);
+  public synchronized void addFailure(junit.framework.Test, junit.framework.AssertionFailedError);
+  public abstract void testStarted(java.lang.String);
+  public abstract void testEnded(java.lang.String);
+  public abstract void testFailed(int, junit.framework.Test, java.lang.Throwable);
+  public junit.framework.Test getTest(java.lang.String);
+  public java.lang.String elapsedTimeAsString(long);
+  protected java.lang.String processArguments(java.lang.String[]);
+  public void setLoading(boolean);
+  public java.lang.String extractClassName(java.lang.String);
+  public static java.lang.String truncate(java.lang.String);
+  protected abstract void runFailed(java.lang.String);
+  protected java.lang.Class<?> loadSuiteClass(java.lang.String) throws java.lang.ClassNotFoundException;
+  protected void clearStatus();
+  protected boolean useReloadingTestSuiteLoader();
+  public static java.lang.String getPreference(java.lang.String);
+  public static int getPreference(java.lang.String, int);
+  public static java.lang.String getFilteredTrace(java.lang.Throwable);
+  public static java.lang.String getFilteredTrace(java.lang.String);
+  protected static boolean showStackRaw();
+  static boolean filterLine(java.lang.String);
+  static {};
+}

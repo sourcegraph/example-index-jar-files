@@ -1,0 +1,3 @@
+public interface org.junit.runner.FilterFactory {
+  public abstract org.junit.runner.manipulation.Filter createFilter(org.junit.runner.FilterFactoryParams) throws org.junit.runner.FilterFactory$FilterNotCreatedException;
+}

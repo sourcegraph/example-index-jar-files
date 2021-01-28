@@ -1,0 +1,3 @@
+public interface org.hamcrest.Condition$Step<I, O> {
+  public abstract org.hamcrest.Condition<O> apply(I, org.hamcrest.Description);
+}

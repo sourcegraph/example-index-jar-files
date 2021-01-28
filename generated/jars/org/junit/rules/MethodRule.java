@@ -1,0 +1,3 @@
+public interface org.junit.rules.MethodRule {
+  public abstract org.junit.runners.model.Statement apply(org.junit.runners.model.Statement, org.junit.runners.model.FrameworkMethod, java.lang.Object);
+}

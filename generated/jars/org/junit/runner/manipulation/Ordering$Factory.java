@@ -1,0 +1,3 @@
+public interface org.junit.runner.manipulation.Ordering$Factory {
+  public abstract org.junit.runner.manipulation.Ordering create(org.junit.runner.manipulation.Ordering$Context);
+}

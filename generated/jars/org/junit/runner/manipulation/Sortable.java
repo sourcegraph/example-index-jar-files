@@ -1,0 +1,3 @@
+public interface org.junit.runner.manipulation.Sortable {
+  public abstract void sort(org.junit.runner.manipulation.Sorter);
+}

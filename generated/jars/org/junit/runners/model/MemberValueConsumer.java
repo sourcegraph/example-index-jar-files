@@ -1,0 +1,3 @@
+public interface org.junit.runners.model.MemberValueConsumer<T> {
+  public abstract void accept(org.junit.runners.model.FrameworkMember<?>, T);
+}

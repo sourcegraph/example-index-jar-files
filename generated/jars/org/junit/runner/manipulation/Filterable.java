@@ -1,0 +1,3 @@
+public interface org.junit.runner.manipulation.Filterable {
+  public abstract void filter(org.junit.runner.manipulation.Filter) throws org.junit.runner.manipulation.NoTestsRemainException;
+}

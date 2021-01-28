@@ -1,0 +1,3 @@
+public interface org.junit.runners.Parameterized$UseParametersRunnerFactory extends java.lang.annotation.Annotation {
+  public abstract java.lang.Class<? extends org.junit.runners.parameterized.ParametersRunnerFactory> value();
+}
