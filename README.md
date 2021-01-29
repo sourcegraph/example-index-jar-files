@@ -2,18 +2,10 @@
 
 This repository contains a script [`index-jar-files.sh`](bin/index-jar-files.sh)
 that walks through `*.jar` files that are tracked by the git repository and
-generates source code in the `generated/` directory.
+makes them searchable by Sourcegraph.
 
-- extracts raw source code from `*-sources.jar` files
-- extracts de-compiled source code from `*.jar` files
-
-The generated sources can be navigated on Sourcegraph using search-based code
-intelligence. For example:
-
-- Find references:
-  https://sourcegraph.com/github.com/sourcegraph/example-index-jar-files@6e46b65301114c5da78f99ad46a53c0537434ec5/-/blob/generated/sources/org/junit/runners/MethodSorters.java#L14:13&tab=references
-- Go to definition:
-  https://sourcegraph.com/github.com/sourcegraph/example-index-jar-files@6e46b65301114c5da78f99ad46a53c0537434ec5/-/blob/generated/sources/org/junit/runner/OrderWithValidator.java#L32:37
+> NOTE: The generated sources can't be navigated on Sourcegraph using
+> search-based code intelligence.
 
 ## Getting started
 
@@ -39,7 +31,7 @@ Next, install the `index-jar-files.sh` script
 
 ```sh
 mkdir -p bin && \
-  curl -L -o bin/index-jar-files.sh https://raw.githubusercontent.com/sourcegraph/example-index-jar-files/main/bin/index-jar-files.sh && \
+  curl -L -o bin/index-jar-files.sh https://raw.githubusercontent.com/sourcegraph/example-index-jar-files/olafurpg/opengrok/bin/index-jar-files.sh && \
   chmod +x bin/index-jar-files.sh
 ```
 
@@ -65,16 +57,6 @@ You should be able to navigate the `main-generated` branch on Sourcegraph now.
 
 ## Known limitations
 
-- **Slow performance**: Due to an implementation detail, it's especially slow to
-  extract decompile `*.jar` files. This part can be dramatically optimized if
-  there is demand, don't hesitate to open an issue to discuss your use-case.
-- **Duplicate classes**: The script extracts source code for all `*.jar` files.
-  If you have both `junit.jar` and `junit-sources.jar`, you generate duplicate
-  output for the JUnit classes. Feel free to tweak the script implementation to
-  index only the jar files that you are interested in. For example, you can
-  create a text file `jars-to-index.txt` that lists all the jar files that you
-  would like to index and then replace `git ls-files` inside the script with
-  `cat jars-to-index.txt`.
 - **Inner classes**: The script currently decompiles inner classes as separate
   source files instead of being nested inside the toplevel class. This
   limitation can be fixed by re-implementing the script as a Java program that
